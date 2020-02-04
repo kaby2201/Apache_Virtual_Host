@@ -6,7 +6,7 @@ read DOMAIN_NAME
 echo "Enter email address for webadmin (this will show app in std.404-page)"
 read DOMAIN_ADMIN_EMAIL
 echo "Do you want to disable the default page? (Y/N)"
-read DESABLE_SITE
+read DISABLE_SITE
 
 sudo mkdir -p /var/www/$DOMAIN_NAME/public_html
 sudo chown -R $USER:$USER /var/www/$DOMAIN_NAME/public_html
@@ -49,10 +49,10 @@ RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
 EOT
 
 sudo a2ensite $DOMAIN_NAME.conf
-if $DESABLE_SITE -eq "Y"
+if $DISABLE_SITE -eq "Y"
 then
   sudo a2dissite 000-default.conf
 fi
 sudo service apache2 restart
+sudo systemctl restart apache2
 echo "The web site $DOMAIN_NAME is now online!"
-echo "Please restarte apache, use 'sudo service apache2 restart' or 'sudo systemctl restart apache2'"
