@@ -16,8 +16,8 @@ sudo tee -a "/var/www/$DOMAIN_NAME/public_html/index.html" > /dev/null <<EOT
   <head>
     <title>Welcome to $DOMAIN_NAME!</title>
   </head>
-  <body> <h1>Success!  The $DOMAIN_NAME virtual host is working!</h1>
-  <p>Please consider making a small <a href="https://commerce.coinbase.com/checkout/b005ae5c-0509-491a-a84b-756057e43a0d">donation</a></p>
+  <body><h1>Success!  The $DOMAIN_NAME virtual host is working!</h1>
+  <p><br>Please consider making a small <a href="https://commerce.coinbase.com/checkout/b005ae5c-0509-491a-a84b-756057e43a0d">donation</a></p>
   </body>
 </html>
 EOT
