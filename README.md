@@ -1,4 +1,4 @@
-# scripts
+# Apache Virtual Host
 ### DNS settings
 Start by pointing your type A domain to the servers public IP.
 ### Clone this repo
