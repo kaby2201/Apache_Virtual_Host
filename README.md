@@ -33,7 +33,7 @@ Certbot provides a variety of ways to obtain SSL certificates through plugins. T
 
 ``sudo certbot --apache -d your_domain -d www.your_domain ``
 
-## Step 5 — Verifying Certbot Auto-Renewal
+### Step 5 — Verifying Certbot Auto-Renewal
 Let’s Encrypt’s certificates are only valid for ninety days. This is to encourage users to automate their certificate renewal process. The certbot package we installed takes care of this for us by adding a renew script to /etc/cron.d. This script runs twice a day and will automatically renew any certificate that’s within thirty days of expiration.
 
 To test the renewal process, you can do a dry run with certbot:
